@@ -101,17 +101,17 @@ filter: blur(5px);
 }
 .typewriter h1 {
   font-size: 42px;
-  font-weight: 200;
+  font-weight: 300;
   color: #87CEEB;
-  font-family: Poppins;
+  font-family: Titillium Web;
   overflow: hidden;
   border-right: .15em solid #87CEEB;
   white-space: nowrap;
   margin: 0 auto;
 
   animation:
-  typing 9s steps(30, end) 5, 
-  blink-caret .5s step-end infinite;
+  typing 9s steps(20, end) 5, 
+  blink-caret .7s step-end infinite;
 }
 
 @keyframes typing {
