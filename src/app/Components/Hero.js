@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import Cube from './Cube'
 import { Box, Typography} from '@mui/material'
