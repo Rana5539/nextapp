@@ -99,30 +99,3 @@ filter: blur(5px);
   margin-left:auto;
   margin-right:auto;
 }
-.typewriter h1 {
-  font-size: 42px;
-  font-weight: 300;
-  color: #87CEEB;
-  font-family: Titillium Web;
-  overflow: hidden;
-  border-right: .15em solid #87CEEB;
-  white-space: nowrap;
-  margin: 0 auto;
-
-  animation:
-  typing 9s steps(20, end) 5, 
-  blink-caret .7s step-end infinite;
-}
-
-@keyframes typing {
-  0% { width: 0 }
-  50% { width: 100% } /* Typing */
-  100% { width: 100% } /* Holding */
-  99.9% { width: 0 } /* Start backspacing just before the animation ends */
-  100% { width: 0 } /* Complete backspacing */
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #87CEEB }
-}
