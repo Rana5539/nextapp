@@ -3,6 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import {Typography, Box, Button} from '@mui/material';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function page() {
   return (
     <>
@@ -57,6 +60,17 @@ function page() {
     </Button>
     
 </Box>
+<Box sx={{display:'flex', gap:3,mt:3}}>
+<GitHubIcon sx={{color:'#87CEEB', fontSize:'37px',cursor:'pointer', 
+filter: 'drop-shadow(0 0 10px #10a9fc)',
+cursor: 'pointer',}}/>
+<FacebookRoundedIcon  sx={{color:'#87CEEB', fontSize:'38px',cursor:'pointer', 
+filter: 'drop-shadow(0 0 10px #10a9fc)',
+cursor: 'pointer',}}/>
+<LinkedInIcon  sx={{color:'#87CEEB', fontSize:'38px',cursor:'pointer', 
+filter: 'drop-shadow(0 0 10px #10a9fc)',
+cursor: 'pointer',}}/>
+    </Box>
 </Box>
     </>
   )
