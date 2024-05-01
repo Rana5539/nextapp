@@ -7,6 +7,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 function page() {
+  const openGitHubProfile = () => {
+    window.open('https://github.com/Rana5539', '_blank');
+  };
+  const LinkedIn = () => {
+    window.open('https://www.linkedin.com/in/waqar-akram-396b36208/', '_blank');
+  };
   return (
     <>
     
@@ -61,12 +67,13 @@ function page() {
     
 </Box>
 <Box sx={{display:'flex', gap:3,mt:3}}>
+  <a href="https://github.com/Rana5539" target="_blank" rel="noopener noreferrer" onClick={openGitHubProfile}>
 <GitHubIcon sx={{color:'#87CEEB', fontSize:'37px',cursor:'pointer', 
 filter: 'drop-shadow(0 0 10px #10a9fc)',
-cursor: 'pointer',}}/>
-<FacebookRoundedIcon  sx={{color:'#87CEEB', fontSize:'38px',cursor:'pointer', 
+cursor: 'pointer',}}/></a>
+<a href="https://www.linkedin.com/in/waqar-akram-396b36208/" target="_blank" rel="noopener noreferrer" onClick={LinkedIn}><FacebookRoundedIcon  sx={{color:'#87CEEB', fontSize:'38px',cursor:'pointer', 
 filter: 'drop-shadow(0 0 10px #10a9fc)',
-cursor: 'pointer',}}/>
+cursor: 'pointer',}}/></a>
 <LinkedInIcon  sx={{color:'#87CEEB', fontSize:'38px',cursor:'pointer', 
 filter: 'drop-shadow(0 0 10px #10a9fc)',
 cursor: 'pointer',}}/>
