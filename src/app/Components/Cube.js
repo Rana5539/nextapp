@@ -1,13 +1,13 @@
 'use client'
-import { Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-
+import {Box} from '@mui/material';
 const ResponsiveMenu = () => {
   return (
     <>
    
     <div>
+    <Box sx={{width:'50vh'}}>
       <div className="cube">
         <div className="top"></div>
         <div>
@@ -29,6 +29,7 @@ const ResponsiveMenu = () => {
           </span>
         </div>
       </div>
+      </Box>
     </div>
     </>
   );
