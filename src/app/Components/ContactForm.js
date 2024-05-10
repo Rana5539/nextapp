@@ -2,6 +2,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import TextField from '@mui/material/TextField';
+
 function ContactForm() {
   return (
     <>
@@ -22,16 +23,40 @@ function ContactForm() {
   justifyContent:'center',
   }}>
     <Typography sx={{mt:2, color:'#87CEEB', fontSize:'25px', fontFamily:'Poppins', }}>  Contact Us</Typography>
-    <TextField  type='text' placeholder='Name' id="fullWidth"  sx={{mt:4, width:'90%', border:'1px solid #87CEEB','& input::placeholder': {
+    <TextField  type='text' placeholder='Name' id="fullWidth"  sx={{mt:4, width:'90%',borderRadius: '65px', border:'1px solid #87CEEB','& input::placeholder': {
       color: 'white', 
       fontFamily: 'Poppins',
       fontSize:'17px',
-          },}}/>
+       
+          },}}
+          InputProps={{
+            style: {
+              borderRadius: '65px', 
+              borderColor:'#87CEEB'
+            },}}/>
     <TextField  type='email' placeholder='Email' id="fullWidth"  sx={{mt:4, width:'90%', border:'1px solid #87CEEB','& input::placeholder': {
       color: 'white', 
       fontFamily: 'Poppins',
       fontSize:'17px'
     },}}/>
+    <TextField
+  type='text'
+  placeholder='Message'
+  id="fullWidth"
+  multiline
+  rows={5}
+  sx={{
+    mt: 4,
+    width: '90%',
+    border: '1px solid #87CEEB',
+    '& input::placeholder': {
+      color: 'white',
+      fontFamily: 'Poppins',
+      fontSize: '17px'
+    },
+  }}
+/>
+
     </Box> 
     </>
   )
