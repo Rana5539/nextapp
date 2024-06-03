@@ -6,7 +6,7 @@ import React, { useEffect } from "react";
 import { Typography, Box, Button } from "@mui/material";
 import Aos from "aos";
 import "aos/dist/aos.css";
-function page() {
+function Page() {
   useEffect(() => {
     Aos.init({
       duration: 800,
@@ -138,4 +138,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
