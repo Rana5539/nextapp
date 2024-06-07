@@ -1,11 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import Education from "../Components/Education";
 function page() {
   return (
     <>
-      about
+      <Education />
     </>
-  )
+  );
 }
 
-export default page
+export default page;

@@ -12,6 +12,9 @@ function Page() {
       duration: 800,
     });
   });
+  const openResume = () => {
+    window.open("/resume.pdf", "_blank");
+  };
   return (
     <>
       <Box
@@ -88,7 +91,12 @@ function Page() {
               },
             }}
           >
-            <Link href="/Contact">
+            <Link
+              href=""
+              onClick={openResume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button
                 variant="contained"
                 sx={{
@@ -99,36 +107,9 @@ function Page() {
                   borderColor: "#09b4fe",
                 }}
               >
-                Get in touch
+                Resume
               </Button>
             </Link>
-            <Button
-              variant="outlined"
-              sx={{
-                color: "white",
-                textTransform: "none",
-                fontFamily: "Poppins",
-                fontWeight: "300",
-                borderColor: "#87CEEB", // Sky blue color
-                animation: "glowBorder 1.5s linear infinite",
-                "@keyframes glowBorder": {
-                  "0%": {
-                    borderColor: "#10a9fc",
-                    boxShadow: "0 0 10px #87CEEB",
-                  },
-                  "50%": {
-                    borderColor: "#00BFFF",
-                    boxShadow: "0 0 15px #87CEEB",
-                  },
-                  "100%": {
-                    borderColor: "#10a9fc",
-                    boxShadow: "0 0 10px #87CEEB",
-                  },
-                },
-              }}
-            >
-              Resume
-            </Button>
           </Box>
 
           <Socialicons />

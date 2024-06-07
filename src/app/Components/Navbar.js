@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 
@@ -62,35 +62,6 @@ function Navbar() {
             </Typography>
           ))}
         </Box>
-        <Link href="/Contact">
-          <Button
-            variant="outlined"
-            sx={{
-              color: "white",
-              textTransform: "none",
-              fontFamily: "Poppins",
-              fontWeight: "300",
-              borderColor: "#87CEEB", // Sky blue color
-              animation: "glowBorder 1.5s linear infinite",
-              "@keyframes glowBorder": {
-                "0%": {
-                  borderColor: "#10a9fc",
-                  boxShadow: "0 0 10px #87CEEB",
-                },
-                "50%": {
-                  borderColor: "#00BFFF",
-                  boxShadow: "0 0 15px #87CEEB",
-                },
-                "100%": {
-                  borderColor: "#10a9fc",
-                  boxShadow: "0 0 10px #87CEEB",
-                },
-              },
-            }}
-          >
-            Contact
-          </Button>
-        </Link>
       </Box>
     </>
   );
