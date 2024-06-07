@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   Timeline,
   TimelineItem,
@@ -11,6 +13,11 @@ import {
 import { Typography, Paper } from "@mui/material";
 
 const EducationTimeline = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+    });
+  });
   return (
     <Timeline position="alternate">
       <TimelineItem>
@@ -19,39 +26,50 @@ const EducationTimeline = () => {
           <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
-          <Paper
-            elevation={3}
-            style={{
-              padding: "6px 16px",
-              background: "rgba(255, 255, 255, 0.25)",
-              borderRadius: "30px",
-              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
-              backdropFilter: "blur(18px)",
-              WebkitBackdropFilter: "blur(28px)",
-              textAlign: "center",
-              color: "white",
-            }}
-          >
-            <Typography
-              variant="h6"
-              sx={{
-                fontFamily: "Poppins",
-                fontWeight: "300",
-                fontSize: "30px",
+          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <Paper
+              elevation={3}
+              style={{
+                padding: "6px 16px",
+                background: "rgba(255, 255, 255, 0.25)",
+                borderRadius: "30px",
+                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
+                backdropFilter: "blur(18px)",
+                WebkitBackdropFilter: "blur(28px)",
+                textAlign: "center",
+                color: "white",
               }}
             >
-              Lahore Garrison University
-            </Typography>
-            <Typography variant="body1">
-              Bachelor of Science in Computer Science
-            </Typography>
-            <Typography variant="body2">2019 - 2024</Typography>
-            <Typography variant="body2">CGPA: 3.4</Typography>
-            <Typography variant="body2">
-              Description: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit.
-            </Typography>
-          </Paper>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontFamily: "Poppins",
+                  fontWeight: "300",
+                  fontSize: "30px",
+                }}
+              >
+                Garisson University Lahore
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
+              >
+                Bachelor-BSCS
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
+              >
+                2019 - 2024
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
+              >
+                CGPA 3.4
+              </Typography>
+            </Paper>
+          </div>
         </TimelineContent>
       </TimelineItem>
       <TimelineItem>
