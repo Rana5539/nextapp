@@ -2,15 +2,7 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import {
-  Timeline,
-  TimelineItem,
-  TimelineSeparator,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-} from "@mui/lab";
-import { Typography, Paper } from "@mui/material";
+import { Box, Typography, Paper } from "@mui/material";
 
 const EducationTimeline = () => {
   useEffect(() => {
@@ -19,164 +11,86 @@ const EducationTimeline = () => {
     });
   });
 
+  const educationData = [
+    {
+      institution: "Garisson University Lahore",
+      degree: "Bachelor-BSCS",
+      years: "2019 - 2023",
+      grade: "CGPA 3.4",
+      animation: "fade-down",
+    },
+    {
+      institution: "Garisson College",
+      degree: "ICS",
+      years: "2017 - 2019",
+      grade: "Grade: 62%",
+      animation: "zoom-in",
+    },
+  ];
+
   return (
-    <Timeline position="alternate" sx={{ mt: 6 }}>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color="primary" />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <div data-aos="fade-down" data-aos-anchor-placement="top-bottom">
-            <Paper
-              elevation={3}
-              style={{
-                padding: 17,
-                background: "rgba(255, 255, 255, 0.25)",
-                borderRadius: "30px",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
-                backdropFilter: "blur(18px)",
-                WebkitBackdropFilter: "blur(28px)",
-                textAlign: "center",
-                color: "white",
+    <Box
+      sx={{
+        mt: 8,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 4,
+      }}
+    >
+      {educationData.map((item, index) => (
+        <div
+          key={index}
+          data-aos={item.animation}
+          data-aos-anchor-placement="top-bottom"
+        >
+          <Paper
+            elevation={3}
+            style={{
+              padding: 17,
+              background: "rgba(255, 255, 255, 0.25)",
+              borderRadius: "30px",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
+              backdropFilter: "blur(18px)",
+              WebkitBackdropFilter: "blur(28px)",
+              textAlign: "center",
+              color: "white",
+              marginBottom: "20px",
+              minWidth: "450px",
+            }}
+          >
+            <Typography
+              variant="h6"
+              sx={{
+                fontFamily: "Poppins",
+                fontWeight: "300",
+                fontSize: "30px",
               }}
             >
-              <Typography
-                variant="h6"
-                sx={{
-                  fontFamily: "Poppins",
-                  fontWeight: "300",
-                  fontSize: "30px",
-                }}
-              >
-                Garisson University Lahore
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                Bachelor-BSCS
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                2019 - 2023
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                CGPA 3.4
-              </Typography>
-            </Paper>
-          </div>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color="primary" />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <div data-aos="zoom-in" data-aos-anchor-placement="top-bottom">
-            <Paper
-              elevation={3}
-              style={{
-                padding: 17,
-                background: "rgba(255, 255, 255, 0.25)",
-                borderRadius: "30px",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
-                backdropFilter: "blur(18px)",
-                WebkitBackdropFilter: "blur(28px)",
-                textAlign: "center",
-                color: "white",
-              }}
+              {item.institution}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: "lightgrey", fontFamily: "inria sans" }}
             >
-              <Typography
-                variant="h6"
-                sx={{
-                  fontFamily: "Poppins",
-                  fontWeight: "300",
-                  fontSize: "30px",
-                }}
-              >
-                Garisson College
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                ICS
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                2017 - 2019
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                Grade: 62%
-              </Typography>
-            </Paper>
-          </div>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot color="primary" />
-        </TimelineSeparator>
-        <TimelineContent>
-          <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <Paper
-              elevation={3}
-              style={{
-                padding: 17,
-                background: "rgba(255, 255, 255, 0.25)",
-                borderRadius: "30px",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.5)",
-                backdropFilter: "blur(18px)",
-                WebkitBackdropFilter: "blur(28px)",
-                textAlign: "center",
-                color: "white",
-              }}
+              {item.degree}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ color: "lightgrey", fontFamily: "inria sans" }}
             >
-              <Typography
-                variant="h6"
-                sx={{
-                  fontFamily: "Poppins",
-                  fontWeight: "300",
-                  fontSize: "30px",
-                }}
-              >
-                Govt School
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                Matriculation
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                2015 - 2017
-              </Typography>
-              <Typography
-                variant="body2"
-                sx={{ color: "lightgrey", fontFamily: "inria sans" }}
-              >
-                Grade: 85%
-              </Typography>
-            </Paper>
-          </div>
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
+              {item.years}
+            </Typography>
+            <Typography
+              variant="body2"
+              sx={{ color: "lightgrey", fontFamily: "inria sans" }}
+            >
+              {item.grade}
+            </Typography>
+          </Paper>
+        </div>
+      ))}
+    </Box>
   );
 };
 

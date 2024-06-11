@@ -3,7 +3,13 @@ import Image from "next/image";
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
+import styled from "styled-components";
 
+const StyledImage = styled(Image)`
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
 function Navbar() {
   const arr = [
     { href: "/", text: "Home" },
@@ -22,13 +28,25 @@ function Navbar() {
           justifyContent: "space-between",
           alignItems: "center",
           display: "flex",
-          "@media (max-width: 800px)": {
-            display: "none",
+          "@media (max-width: 700px)": {
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
           },
         }}
       >
         <Link href="/" style={{ textDecoration: "none" }}>
-          <Image src="/logo.png" width={80} height={80} alt={"logo"}></Image>
+          <StyledImage
+            src="/logo.png"
+            width={80}
+            height={80}
+            alt={"logo"}
+            style={{
+              "@media (max-width: 700px)": {
+                display: "none",
+              },
+            }}
+          ></StyledImage>
         </Link>
 
         <Box
@@ -42,8 +60,7 @@ function Navbar() {
             boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
             backdropFilter: "blur(18px)",
             WebkitBackdropFilter: "blur(18px)",
-            width: "25%",
-            justifyContent: "space-between",
+
             alignItems: "center",
             display: "flex",
           }}
@@ -51,7 +68,12 @@ function Navbar() {
           {arr.map((data, index) => (
             <Typography
               key={index}
-              sx={{ color: "white", fontFamily: "Poppins", fontWeight: "300" }}
+              sx={{
+                color: "white",
+                fontFamily: "Poppins",
+                fontWeight: "300",
+                ml: 2.5,
+              }}
             >
               <a
                 href={data.href}
