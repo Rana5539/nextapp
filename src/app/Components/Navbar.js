@@ -72,7 +72,7 @@ function Navbar() {
                 color: "white",
                 fontFamily: "Poppins",
                 fontWeight: "300",
-                ml: 2.5,
+                ml: 2.6,
               }}
             >
               <a
