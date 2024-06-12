@@ -9,7 +9,7 @@ const EducationTimeline = () => {
     Aos.init({
       duration: 800,
     });
-  });
+  }, []);
 
   const educationData = [
     {
@@ -17,6 +17,7 @@ const EducationTimeline = () => {
       degree: "Bachelor-BSCS",
       years: "2019 - 2023",
       grade: "CGPA 3.4",
+      logo: "/lgu.png", // Update with the actual path to the logo
       animation: "fade-down",
     },
     {
@@ -24,6 +25,7 @@ const EducationTimeline = () => {
       degree: "ICS",
       years: "2017 - 2019",
       grade: "Grade: 62%",
+      logo: "/clg.png", // Update with the actual path to the logo
       animation: "zoom-in",
     },
   ];
@@ -59,6 +61,11 @@ const EducationTimeline = () => {
               minWidth: "450px",
             }}
           >
+            <img
+              src={item.logo}
+              alt={`${item.institution} logo`}
+              style={{ height: "70px", marginBottom: "20px" }}
+            />
             <Typography
               variant="h6"
               sx={{
