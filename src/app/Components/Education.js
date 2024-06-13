@@ -7,7 +7,7 @@ import { Box, Typography, Paper } from "@mui/material";
 const EducationTimeline = () => {
   useEffect(() => {
     Aos.init({
-      duration: 800,
+      duration: 700,
     });
   }, []);
 
