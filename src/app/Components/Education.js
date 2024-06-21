@@ -49,6 +49,7 @@ const EducationTimeline = () => {
           <Paper
             elevation={3}
             style={{
+              border:'1px dashed dodgerblue',
               padding: 17,
               background: "rgba(255, 255, 255, 0.25)",
               borderRadius: "30px",

@@ -51,9 +51,9 @@ function Navbar() {
 
         <Box
           sx={{
-            pr: 4,
+            pr: 5,
             pt: 1.7,
-            pl: 4,
+            pl: 5,
             pb: 1.7,
             background: "rgba(255, 255, 255, 0.15)",
             borderRadius: "16px",
